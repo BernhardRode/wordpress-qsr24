@@ -1,1 +1,193 @@
+.navbar-default {
+  background:rgba(255,255,255,.8);
+
+  &.consulting-and-engineering {
+    li.active {
+      a {
+        background-color: transparent;
+        color: @brand-consulting-and-engineering;
+        &:hover {
+          color:@brand-gray;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &.quality-and-rework {
+    li.active {
+      a {
+        background-color: transparent;
+        color: @brand-quality-and-rework;
+        &:hover {
+          color:@brand-gray;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &.timework {
+    li.active {
+      a {
+        background-color: transparent;
+        color: @brand-timework;
+        &:hover {
+          color:@brand-gray;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &.neutral {
+    li.active {
+      a {
+        background-color: transparent;
+        color: @brand-neutral;
+        &:hover {
+          color:@brand-gray;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+}
+
+.qsrgroup-header {
+  top:0px;
+  height:75px;
+  left:0px;
+  right:0px;
+  position: relative;
+  background-color: @qsr-group-logo-background;
+
+  .container {
+    position: relative;
+    height:75px;
+  }
+
+  h1 {
+    font-weight:100;
+    font-size:1.4em;
+    white-space: nowrap;
+    color:#fff;
+    margin-top: 10px;
+    em {
+      font-style:normal;
+    }
+  }
+
+  h2 {
+    font-weight:100;
+    font-size:1em;
+    white-space: nowrap;
+    color:#fff;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .company-box {
+    position: absolute;
+    bottom:0;
+    right:0;
+
+    ul {
+      li {
+
+      }
+    }
+
+    color:#fff;
+    a {
+      color:#fff;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    li {
+      height:30px;
+      margin-right:-4px;
+
+      &.active {
+        a {
+          font-weight:100;
+        }
+      }
+
+      a {
+        padding-top:5px;
+        padding-left:35px;
+        background-repeat: no-repeat;
+        background-position: 5px -3px;
+        background-size: 25px;
+        line-height:30px;
+      }
+
+      &.menu-consulting-engineering {
+        a {
+          background-image: url('../img/white-small-logo-consulting-and-engineering.png');
+        }
+        background-color: @brand-consulting-and-engineering;
+      }
+      &.menu-qualitaetssicherung-rework {
+        a {
+          background-image: url('../img/white-small-logo-quality-and-rework.png');
+        }
+        background-color: @brand-quality-and-rework;
+      }
+      &.menu-timework {
+        a {
+          background-image: url('../img/white-small-logo-timework.png');
+        }
+        background-color: @brand-timework;
+      }
+      &.menu-neutral {
+        // a {
+        //   background-image: url('../img/white-small-logo-neutral.png');
+        // }
+        background-color: @brand-neutral;
+      }
+    }
+    // img {
+    //   padding-bottom:8px;
+    // }
+    // span {
+    //   padding-top:4px;
+    //   display:inline-block;
+    //   width:200px;
+    //   text-align: center;
+    // }
+  }
+
+  // Company Timework
+  // -------------------------
+  &.timework {
+    border-bottom:10px solid @brand-timework;
+  }
+
+  // Company Consulting and Engineering
+  // -------------------------
+  &.consulting-and-engineering {
+    border-bottom:10px solid @brand-consulting-and-engineering;
+  }
+
+  // Company Timework Quality and Rework
+  // -------------------------
+  &.quality-and-rework {
+    border-bottom:10px solid @brand-quality-and-rework;
+  }
+
+  // Company Neutral
+  // -------------------------
+  border-bottom:10px solid @brand-neutral;
+
+}
+
+.navbar-static-top {
+}
+
 .banner { }

@@ -15,38 +15,38 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     return preg_match('/(current[-_])|active|dropdown/', $classes);
   }
 
-  function start_lvl(&$output, $depth = 0, $args = array()) {
-    $output .= "\n<ul class=\"dropdown-menu\">\n";
-  }
+  // function start_lvl(&$output, $depth = 0, $args = array()) {
+  //   $output .= "\n<ul class=\"dropdown-menu\">\n";
+  // }
 
-  function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-    $item_html = '';
-    parent::start_el($item_html, $item, $depth, $args);
+  // function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+  //   $item_html = '';
+  //   parent::start_el($item_html, $item, $depth, $args);
 
-    if ($item->is_dropdown && ($depth === 0)) {
-      $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
-      $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
-    }
-    elseif (stristr($item_html, 'li class="divider')) {
-      $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
-    }
-    elseif (stristr($item_html, 'li class="dropdown-header')) {
-      $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
-    }
+  //   if ($item->is_dropdown && ($depth === 0)) {
+  //     $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
+  //     $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);
+  //   }
+  //   elseif (stristr($item_html, 'li class="divider')) {
+  //     $item_html = preg_replace('/<a[^>]*>.*?<\/a>/iU', '', $item_html);
+  //   }
+  //   elseif (stristr($item_html, 'li class="dropdown-header')) {
+  //     $item_html = preg_replace('/<a[^>]*>(.*)<\/a>/iU', '$1', $item_html);
+  //   }
 
-    $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);
-    $output .= $item_html;
-  }
+  //   $item_html = apply_filters('roots/wp_nav_menu_item', $item_html);
+  //   $output .= $item_html;
+  // }
 
-  function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
-    $element->is_dropdown = ((!empty($children_elements[$element->ID]) && (($depth + 1) < $max_depth || ($max_depth === 0))));
+  // function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+  //   $element->is_dropdown = ((!empty($children_elements[$element->ID]) && (($depth + 1) < $max_depth || ($max_depth === 0))));
 
-    if ($element->is_dropdown) {
-      $element->classes[] = 'dropdown';
-    }
+  //   if ($element->is_dropdown) {
+  //     $element->classes[] = 'dropdown';
+  //   }
 
-    parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
-  }
+  //   parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+  // }
 }
 
 /**
@@ -93,3 +93,23 @@ function roots_nav_menu_args($args = '') {
   return array_merge($args, $roots_nav_menu_args);
 }
 add_filter('wp_nav_menu_args', 'roots_nav_menu_args');
+
+function timework_navigation() {
+  register_nav_menu('timework',__( 'Timework' ));
+}
+add_action( 'init', 'timework_navigation' );
+
+function quality_and_rework_navigation() {
+  register_nav_menu('quality-and-rework',__( 'Quality & Rework' ));
+}
+add_action( 'init', 'quality_and_rework_navigation' );
+
+function consulting_and_engineering_navigation() {
+  register_nav_menu('consulting-and-engineering',__( 'Consulting & Engineering' ));
+}
+add_action( 'init', 'consulting_and_engineering_navigation' );
+
+function companies_navigation() {
+  register_nav_menu('companies',__( 'Companies' ));
+}
+add_action( 'init', 'companies_navigation' );

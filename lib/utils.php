@@ -2,6 +2,7 @@
 /**
  * Utility functions
  */
+
 function is_element_empty($element) {
   $element = trim($element);
   return !empty($element);
@@ -25,6 +26,7 @@ function roots_body_class($classes) {
       $classes[] = basename(get_permalink());
     }
   }
+
   return $classes;
 }
 add_filter('body_class', 'roots_body_class');

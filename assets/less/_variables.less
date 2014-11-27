@@ -10,8 +10,107 @@
 
 @brand-primary:         #27ae60;
 
+@brand-neutral: #9b9b9b;
+@brand-timework: rgb(220,145,27);
+@brand-consulting-and-engineering: rgb(100,183,235);
+@brand-quality-and-rework: rgb(158,190,75);
+
+
+@brand-gray: rgb(0,0,0);
+@brand-green: rgb(142,175,55); // 100%
+@brand-blue: rgb(18,93,158); // 44%
+@brand-orange: rgb(192,92,22); // 44%
+
+@brand-gray-dark: #343434;
+@brand-gray-light: #616161;
+@brand-gray-lightest: @brand-neutral;
+@brand-gray-lightester: rgba(211,211,211,.8);
+
+@qsr-group-logo-background: #3d3d3c;
+
+
 
 // Glyphicons path
 // -------------------------
 
 @icon-font-path:        "../vendor/bootstrap/fonts/";
+
+
+
+.visible {
+  display:none;
+}
+
+// Company Timework
+// -------------------------
+.neutral {
+  &.highlight, .highlight {
+    color:@brand-neutral;
+  }
+  &.background, .background {
+    background:@brand-neutral;
+  }
+  .visible {
+    display:block;
+  }
+}
+
+.neutral-background {
+  background:@brand-neutral;
+}
+
+// Company Timework
+// -------------------------
+.timework {
+  &.highlight, .highlight {
+    color:@brand-timework;
+  }
+  &.background, .background {
+    background:@brand-timework;
+  }
+  .visible {
+    display:block;
+  }
+}
+
+.timework-background {
+  background:@brand-timework;
+}
+
+
+// Company Consulting and Engineering
+// -------------------------
+.consulting-and-engineering {
+  &.highlight, .highlight {
+    color:@brand-consulting-and-engineering;
+  }
+  &.background, .background {
+    background:@brand-consulting-and-engineering;
+  }
+  .visible {
+    display:block;
+  }
+}
+
+.consulting-and-engineering-background {
+  background:@brand-consulting-and-engineering;
+}
+
+
+// Company Timework Quality and Rework
+// -------------------------
+.quality-and-rework {
+  &.highlight, .highlight {
+    color:@brand-quality-and-rework;
+  }
+  &.background, .background {
+    background:@brand-quality-and-rework;
+  }
+  .visible {
+    display:block;
+  }
+}
+
+.quality-and-rework-background {
+  background:@brand-quality-and-rework;
+}

@@ -1,1 +1,55 @@
-.content-info { }
+.content-info {
+  background: @qsr-group-logo-background;
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:35px;
+  color:@gray-light;
+  z-index:200;
+  padding-top:5px;
+
+  a {
+    color:@gray-light;
+  }
+
+  // Company Timework
+  // -------------------------
+  &.timework {
+    border-top:5px solid @brand-timework;
+
+    a:hover {
+      color: @brand-timework;
+    }
+  }
+
+  // Company Timework
+  // -------------------------
+  &.neutral {
+    border-top:5px solid @brand-neutral;
+
+    a:hover {
+      color: @brand-neutral;
+    }
+  }
+
+  // Company Consulting and Engineering
+  // -------------------------
+  &.consulting-and-engineering {
+    border-top:5px solid @brand-consulting-and-engineering;
+
+    a:hover {
+      color: @brand-consulting-and-engineering;
+    }
+  }
+
+  // Company Timework Quality and Rework
+  // -------------------------
+  &.quality-and-rework {
+    border-top:5px solid @brand-quality-and-rework;
+
+    a:hover {
+      color:@brand-quality-and-rework;
+    }
+  }
+}

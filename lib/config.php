@@ -57,11 +57,21 @@ function roots_display_sidebar() {
        * Any of these page templates that return true won't show the sidebar
        */
       array(
-        'template-custom.php'
+        'template-custom.php',
+        'template-consulting-and-engineering-locations.php',
+        'template-consulting-and-engineering-home.php',
+        'template-consulting-and-engineering.php',
+        'template-landing-page.php',
+        'template-quality-and-rework-locations.php',
+        'template-quality-and-rework-home.php',
+        'template-quality-and-rework.php',
+        'template-timework-locations.php',
+        'template-timework-home.php',
+        'template-timework.php'
       )
     );
     $display = apply_filters('roots/display_sidebar', $sidebar_config->display);
-  }  
+  }
 
   return $display;
 }
